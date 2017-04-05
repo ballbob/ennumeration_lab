@@ -23,6 +23,15 @@ Enumeration.prototype = {
       result.push(mapFunction(element))
     })
     return result
+  },
+
+  filter: function(array,filterFunction){
+    var result = [];
+    array.forEach(function(element){
+      if(filterFunction(element)){
+    result.push(element)}
+    })
+    return result
   }
 
 }
