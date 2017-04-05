@@ -42,7 +42,21 @@ Enumeration.prototype = {
       }
     })
     return result
-  } 
+  }, 
+
+  every: function(array,everyFunction){
+    var violations = 0 
+    array.forEach(function(element){
+      if(everyFunction(element) === false){
+        violations ++
+      }
+    })
+    if(violations > 0){
+      return false
+    }else{
+      return true
+    }
+  }
 
 }
 
