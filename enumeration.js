@@ -32,7 +32,17 @@ Enumeration.prototype = {
     result.push(element)}
     })
     return result
-  }
+  },
+
+  some: function(array,someFunction){
+    result = false;
+    array.forEach(function(element){
+      if (someFunction(element) === true){
+        result = true
+      }
+    })
+    return result
+  } 
 
 }
 
