@@ -15,6 +15,14 @@ Enumeration.prototype = {
       }
     })
     return result
+  },
+
+  map: function(array, mapFunction){
+    var result =[];
+    array.forEach(function(element){
+      result.push(mapFunction(element))
+    })
+    return result
   }
 
 }
