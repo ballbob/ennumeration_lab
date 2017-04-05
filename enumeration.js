@@ -56,6 +56,16 @@ Enumeration.prototype = {
     }else{
       return true
     }
+  },
+
+  reduce: function(array, reduceFunction){
+    var accumulator = 0
+    var result = 0
+    array.forEach(function(element){
+
+      result += element 
+    })
+    return result
   }
 
 }
